@@ -23,15 +23,17 @@ function calculate(op) {
 	
 	else if(num1 >= 0){
 	
-	var result = eval(`${num2} ${op} ${num1}`);
+	result = eval(`${num2} ${op} ${num1}`);
 	
 
-	outputField.innerHTML = (result);
-	historyField.innerHTML += (" " + num1 + " " + op);
+	historyField.innerHTML += (" " + op + " " + num1);
 	numInput.value = "";
 
 	num2 = result;
 	num1 = 0;
 	}
 	
+	else if (op == '='){
+		outputField.innerHTML = (result);
+	}
 }
